@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        
+        .navbar {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 15px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar img {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            padding: 10px;
+        }
+
+        
+        .hero {
+            background-color: #1f2937;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px, #f9faf8;
+            margin-right: 70%;
+        }
+
+        .hero p {
+            font-size: 18px, #E5E7EB;
+            margin-right: 70%;
+        }
+
+        .hero button {
+            background-color: #007BFF;
+            margin-right: 70%;
+    
+        }
+
+        .hero img {
+            
+            max-width: 50%;
+        }
+
+        
+        .info {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #f4f4f4;
+        }
+
+        .info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            border : 2px, solid #007BFF;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 150px;
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        
+        .quote {
+            background-color: #e8e8e8;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .quote h3 {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .quote p {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        
+        .CTA {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .CTA h4 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .CTA button {
+            background-color: #0056b3;
+        }
+
+        
+        .footer {
+            background-color: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <img src="download (2).jpg" alt="Atsuii">
+            <ul class="nav-links">
+                <li><a href="#">UAI</a></li>
+                <li><a href="#">UIIAIUIIIAI</a></li>
+                <li><a href="#">Why Brainrot</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <img src="maxresdefault.jpg" alt="Hero Image" align="right">
+            <h2>Gambling problem is make you want to quit this world sever?</h2>
+            <p>Let us fix your Gambling problem but you need to join us group first then we will talk about how to quit this world sever</p>
+            <button>Join Us</button>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="container">
+            <h3>4 Way to quit this world sever</h3>
+            <div class="boxes">
+                <div class="box">
+                    <img src="images (1).jpg" alt="Tempura">
+                    <p>Buy tempura Hoshino</p>
+                </div>
+                <div class="box">
+                    <img src="maxresdefault (1).jpg" alt="Reset?">
+                    <p>Reset Character</p>
+                </div>
+                <div class="box">
+                    <img src="images (2).jpg" alt="Roblox">
+                    <p>Play Roblox</p>
+                </div>
+                <div class="box">
+                    <img src="images (3).jpg" alt="Slot machine">
+                    <p>Still Gambling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote">
+        <div class="container">
+            <h3>"I has been work for this company for 10 years and i can say that you can escape from gambling or still gambling away."</h3>
+            <p>Jessada Inta -W-</p>
+        </div>
+    </section>
+
+    <section class="CTA">
+        <div class="container">
+            <h4>If you want to learn more about us </h4>
+            <button>Click Here</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made with HTML ENGSE611 Class</p>
+        </div>
+    </footer>
+</body>
+</html>
