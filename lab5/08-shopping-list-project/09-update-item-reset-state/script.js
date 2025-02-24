@@ -4,6 +4,7 @@ const itemList = document.getElementById('item-list');
 const clearBtn = document.getElementById('clear');
 const itemFilter = document.getElementById('filter');
 const formBtn = itemForm.querySelector('button');
+const itemCount = document.getElementById('item-count');
 let isEditMode = false;
 
 function displayItems() {
@@ -201,5 +202,13 @@ function init() {
 
   checkUI();
 }
+function updateItemCount() {
+  const items = itemList.querySelectorAll('li');
+  itemCount.textContent = `Total Items: ${items.length}`;
+}
+const observer = new MutationObserver(updateItemCount);
+observer.observe(itemList, { childList: true });
+
+document.addEventListener('DOMContentLoaded', updateItemCount);
 
 init();
