@@ -40,7 +40,7 @@ body {
   }
   
   button[type="submit"]:hover {
-    background-color: #3498db;
+    background-color: #5ae2d0;
   }
   
   ul {
@@ -65,7 +65,7 @@ body {
   
   li button {
     background-color: #e74c3c;
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
@@ -74,10 +74,10 @@ body {
   }
   
   li button:hover {
-    background-color: #c0392b;
+    background-color: #6e0b00;
   }
   
   li.completed {
-    background-color: #ecf0f1;
+    background-color: #ffffff;
   }
   
