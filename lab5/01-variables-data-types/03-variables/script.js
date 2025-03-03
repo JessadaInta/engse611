@@ -1,62 +1,60 @@
-let name;
-let surname;
+// Ways to declare a variable
+// `var`, `let`, & `const`
 
-let Name;
-let cat;
-let cats=["array1","array2"]
+let firstName = 'John';
+const lastName = 'Doe';
+let age = 30;
 
-let a=1;
-let b=2;
-let c=3;
+console.log(age);
 
+// Naming Conventions
+// - Only letters, numbers, underscores and dollar signs
+// - Can't start with a number
 
+// Multi-Word Formatting
+// firstName = camelCase
+// first_name = underscore
+// FirstName = PascalCase
+// firstname = lowercase
 
-let bangkok_full_name;
-//assigntment statement
-bangkok_full_name=("กรุงเทพมหานคร อมรรัตนโกสินทร์ มหินทรายุธยา มหาดิลกภพ นพรัตน์ราชธานีบุรีรมย์ อุดมราชนิเวศน์มหาสถาน อมรพิมานอวตารสถิต สักกะทัตติยะวิษณุกรรมประสิทธิ์");
+// We can re-assign `let` variables. If you change `age` to use `const`, you will get an error
+age = 31;
+console.log(age);
 
-console.log(bangkok_full_name, typeof bangkok_full_name);
+// With let, we can declare a value without assigning a value
+let score;
+score = 1;
+console.log(score);
 
+if (true) {
+  score = score + 1;
+}
 
-console.log(a,b,c);
-console.log(a, typeof a);
-console.log(b, typeof b);
-console.log(c, typeof c);
+console.log(score);
 
+const x = 100;
 
-let Bignumber=10000000000000000000n;
-console.log(Bignumber, typeof Bignumber);
+// We can not re-assign a const variable
+// x = 200 // Will result in an error
 
-console.log(cats, typeof cats)
-
-let is_deleted = false;
-console.log(is_deleted, typeof is_deleted)
-
-f=1;
-console.log(f, typeof f);
-
-f="1";
-console.log(f, typeof f);
-
-f=f+2;
-console.log(f, typeof f);
-
-const arr=[11,22,33,44];
+// We can still manipulate arrays and objects using const
+const arr = [1, 2, 3, 4];
+arr.push(5);
 console.log(arr);
-
-arr.push (55);
-console.log(arr);
-
-arr.pop ();
-console.log(arr);
-
 
 const person = {
-    Name : "Niggas",
-    Email : "Niggas@iw.com"
-}
+  name: 'Brad',
+};
+person.name = 'John';
+person.email = 'brad@gmail.com';
 console.log(person);
 
-person.Name = ("jingle");
-person.Email = ("jinGle@Gam.com");
-console.log(person);
+// Declare multiple values at once
+let a, b, c;
+
+const d = 10,
+  e = 20,
+  f = 30;
+
+console.log(d);
+console.log(a);

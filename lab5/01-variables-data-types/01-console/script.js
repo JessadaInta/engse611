@@ -1,13 +1,30 @@
-console.log("Hello World.");
-console.log(12.9 + 78);
-console.log("ans"+ 78+12 );
+// Log number
+console.log(100);
 
-const cat="kiko";
-let fumo;
-fumo="fumofumo";
+// Log string
+console.log('Hello World');
 
+// Log multiple values
+console.log(20, 'Hello', true);
 
-console.log(fumo);
-console.log(cat);
+// Log a variable
+const x = 100;
+console.log(x);
 
-console.warn('this is for my salt')
+// Console error & warning
+console.error('Alert');
+console.warn('Warning');
+
+// Log object as table
+console.table({ name: 'Brad', email: 'brad@gmail.com' });
+
+// Group console commands
+console.group('simple');
+console.log(x);
+console.error('Alert');
+console.warn('Warning');
+console.groupEnd();
+
+// Add CSS to logs
+const styles = 'padding: 10px; background-color: white; color: green';
+console.log('%cHello World', styles);

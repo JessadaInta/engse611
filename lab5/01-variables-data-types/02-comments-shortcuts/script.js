@@ -1,15 +1,10 @@
-/*console.log("Hello World.");
-console.log(12.9 + 78);
-console.log("ans"+ 78+12 );
+// This is a single line of code
+
+/*
+Multi-line comment
+console.log(100);
+
+console.log('Hello World');
+
+console.log(20, 'Hello', true);
 */
-const cat="kiko";
-let fumo;
-fumo="fumofumo";
-
-
-console.log(fumo);
-console.log(cat);
-
-
-//salty
-console.warn('this is for my salt')
