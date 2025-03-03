@@ -19,14 +19,14 @@ function addTodo() {
 
     todoInput.value = "";
 
-    renderTodos();
+    renderTodo();
   }
 }
 
 function deleteTodo(id) {
   //console.log(id);
   todos = todos.filter((todo) => todo.id !== id);
-  renderTodos();
+  renderTodo();
 }
 
 function toggleCompleted(id) {
@@ -39,18 +39,16 @@ function toggleCompleted(id) {
     }
     return todo;
   });
-  renderTodos();
+  renderTodo();
 }
 
-function renderTodos() {
+function renderTodo() {
   todoList.innerHTML = "";
 
   todos.forEach((todo) => {
     const todoItem = document.createElement("li");
     const todoText = document.createElement("span");
     const todoDeleteButton = document.createElement("button");
-    const myCheck = document.createElement("INPUT");
-          myCheck.setAttribute("type", "checkbox");
 
     todoText.textContent = todo.text;
     todoDeleteButton.textContent = "Delete";
@@ -62,10 +60,9 @@ function renderTodos() {
     }
 
     todoItem.addEventListener("click", () => toggleCompleted(todo.id));
-  
+
     todoItem.appendChild(todoText);
     todoItem.appendChild(todoDeleteButton);
-
 
     todoList.appendChild(todoItem);
   });
@@ -76,4 +73,4 @@ form.addEventListener("submit", (event) => {
   addTodo();
 });
 
-renderTodos();
+renderTodo();
