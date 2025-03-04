@@ -6,33 +6,38 @@ const todoList = document.querySelector("#todo-list");
 let todos = [];
 
 function addTodo() {
-  //console.log("Hello, guys.");
   const todoText = todoInput.value.trim();
-  if (todoText.length > 0) {
-    const todo = {
-      id: Date.now(),
-      text: todoText,
-      completed: false,
-    };
+  
+  if (todoText.length === 0) {
+    alert("Eneter Task");
+    return;
+  }
+  
+  if (todoText.length > 50) {
+    alert("There must be less than 50 character");
+    return;
+  }
 
-    todos.push(todo);
+  const todo = {
+    id: Date.now(),
+    text: todoText,
+    completed: false,
+  };
 
-    todoInput.value = "";
+  todos.push(todo);
+  todoInput.value = "";
+  renderTodo();
+}
 
+function deleteTodo(id) {
+  const confirmDelete = confirm("Do you want to delete this task?");
+  if (confirmDelete) {
+    todos = todos.filter((todo) => todo.id !== id);
     renderTodo();
   }
 }
 
-function deleteTodo(id) {
-  //console.log(id);
-  todos = todos.filter((todo) => todo.id !== id);
-  renderTodo();
-}
-
 function toggleCompleted(id) {
-  // console.log(id);
-  //let a = 1;
-  //a = a + 1; //a = 2
   todos = todos.map((todo) => {
     if (todo.id === id) {
       todo.completed = !todo.completed;
@@ -49,18 +54,25 @@ function renderTodo() {
     const todoItem = document.createElement("li");
     const todoText = document.createElement("span");
     const todoDeleteButton = document.createElement("button");
+    const todoCheckbox = document.createElement("input");
 
     todoText.textContent = todo.text;
     todoDeleteButton.textContent = "Delete";
+    todoCheckbox.type = "checkbox";
+    todoCheckbox.checked = todo.completed;
 
     todoDeleteButton.addEventListener("click", () => deleteTodo(todo.id));
+    todoCheckbox.addEventListener("change", () => toggleCompleted(todo.id));
 
     if (todo.completed) {
-      todoItem.classList.add("completed");
+      todoText.style.textDecoration = "line-through";
+      todoText.style.color = "gray";
+    } else {
+      todoText.style.textDecoration = "none";
+      todoText.style.color = "black";
     }
 
-    todoItem.addEventListener("click", () => toggleCompleted(todo.id));
-
+    todoItem.appendChild(todoCheckbox);
     todoItem.appendChild(todoText);
     todoItem.appendChild(todoDeleteButton);
 
