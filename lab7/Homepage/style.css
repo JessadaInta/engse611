@@ -19,3 +19,21 @@ body {
     padding: 10px;
     text-align: left;
 }
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh; 
+    background-color: white;
+    color: black;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
